@@ -1,0 +1,20 @@
+{
+    "about_us_short_desc": "KOMPAS - USU merupakan suatu organisasi yang menghimpun sekelompok mahasiswa USU dengan hobi dan minat yang sama dan menyadari bahwa dibutuhkannya suatu wadah formal penyalur hobi dan minat mahasiswa USU dalam bidang kepencinta alaman dan studi lingkungan hidup",
+    "articles": [
+        {
+            "title": "TANO NIHA",
+            "short_desc":"Eksplorasi Sumatera Utara pada tahun 2018 berfokus pada eksplorasi kawasan gua yang ada di Pulau Nias sebagai upaya penyadaran akan pentingnya pelestarian kawasan gua. Adapun bentuk kegiatan ini adalah pemetaan gua di Pulau Nias, melakukan fotografi gua, dan pengabdian masyarakat sebagai pengaplikasian Tri Dharma Perguruan Tinggi.",
+            "img_url" : "https://erynimage.s3.ap-southeast-1.amazonaws.com/kompas_usu/_MG_5801.JPG"
+        },
+        {
+            "title": "Dolok Tenaroh",
+            "short_desc":"Kegiatan Pendakian Rumah Liang – Dolok Tenaroh termasuk kegiatan eksplorasi Sumatera Utara yang memiliki tujuan penambahan dan pengembangan informasi potensi jalur selama kegiatan. Dalam pendakian kali ini KOMPAS USU menerapkan gaya hidup minim sampah di jalur pendakian yang belum pernah dilalui dalam kata lain menjadi tim yang pertama kali menjangkau tempat kegiatan",
+            "img_url" : "https://erynimage.s3.ap-southeast-1.amazonaws.com/kompas_usu/DSC_0374.JPG"
+        },
+        {
+            "title": "LAWE ALAS",
+            "short_desc":"Sungai Alas terletak disepanjang Kabupaten Aceh Tenggara, Kabupaten Gayo Lues dan Kabupaten Aceh Selatan. Sungai ini merupakan sungai terpanjang di Provinsi Aceh yang memiliki arus yang luar biasa menarik perhatian penggemar arung jeram dari seluruh dunia. Kegiatan eksplorasi ini dapat meningkatkan hardskill dan softskill tim serta mencari informasi mengenai keadaan sungai disepanjang jalur pengarungan",
+            "img_url" : "https://erynimage.s3.ap-southeast-1.amazonaws.com/kompas_usu/lawe_alas.jpeg"
+        }
+    ]
+}
