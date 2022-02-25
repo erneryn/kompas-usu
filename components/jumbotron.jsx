@@ -1,6 +1,4 @@
-import Style from "../styles/Home.module.css";
-
-export default () => {
+export default function Jumbptron () {
   return (
     <div className="relative overflow-x-hidden">
       <div className="h-screen ">
@@ -11,7 +9,7 @@ export default () => {
             <div className="w-11/12 sm:w-8/12 bg-gray-400 bg-opacity-30 py-7 px-4 mb-10 sm:mb40 rounded-xl">
             <h1 className="text-4xl text-yellow-300 font-bold text-center">KOMPAS USU</h1>
             <h1 className="text-base text-white text-center mb-4 tracking-wide">Korps Mahasiswa Pecinta Alam dan Studi Lingkungan Hidup</h1>
-            <h1 className="text-xl sm:text-2xl text-white font-bold text-center">"Membina insan akademis yang sadar, mampu, dan bertanggungjawab untuk melestarikan alam sebagai lingkungan hidup yang sehat."</h1>
+            <h1 className="text-xl sm:text-2xl text-white font-bold text-center">Membina insan akademis yang sadar, mampu, dan bertanggungjawab untuk melestarikan alam sebagai lingkungan hidup yang sehat.</h1>
             </div>
         </div> 
       </div>

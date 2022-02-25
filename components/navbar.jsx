@@ -2,8 +2,11 @@ import Style from "../styles/Home.module.css";
 import { MenuOutlined } from "@ant-design/icons";
 import { Drawer, Button } from "antd";
 import { useState } from "react";
+import Link from 'next/link';
+import { Link  as Scroll  } from "react-scroll";
 
-export default function Navbar() {
+
+export default function Navbar({type}) {
   const [visible, setVisible] = useState(false);
   const showDrawer = () => {
     setVisible(true);
@@ -19,18 +22,49 @@ export default function Navbar() {
         </div>
         <div className="w-9/12 flex items-center justify-end">
           <ul className="flex items-center">
+            <Link href='/'>
             <li className="text-lg mr-10 hover:text-yellow-400 cursor-pointer">
               Home
             </li>
+            </Link>
+            {
+            type !== 'pages' && 
+            <>
+             <Scroll
+                to="about"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={500}
+              >
             <li className="text-lg mr-10 hover:text-yellow-400 cursor-pointer">
               Tentang Kami
             </li>
+            </Scroll>
+            <Scroll
+                to="rekamjejak"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={500}
+              >
             <li className="text-lg mr-10 hover:text-yellow-400 cursor-pointer">
               Rekam Jejak
             </li>
+            </Scroll>
+            <Scroll
+                to="division"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={500}
+              >
             <li className="text-lg mr-10 hover:text-yellow-400 cursor-pointer">
               Divisi
             </li>
+            </Scroll>
+            </>
+            }
             <li className="text-lg mr-10 hover:text-yellow-400 cursor-pointer">
               Kontak Kami
             </li>

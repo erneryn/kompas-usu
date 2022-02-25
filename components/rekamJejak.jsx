@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
-import { articles } from '../wording.json'
+import  Wording from '../wording.json'
+import Link from 'next/link'
 
 export default function SimpleSlider () {
   
@@ -29,26 +30,26 @@ export default function SimpleSlider () {
           </div>
           <Slider {...settings}>
             {
-              articles.map((e)=>
-            <div className="px-2">
+              Wording.Articles.map((e,idx)=>
+            <div className="px-2" key={idx}>
               <div
+                
                 className="w-full h-60 bg-cover bg-no-repeat bg-center rounded-t-xl"
                 style={{
                   backgroundImage:
                     `url('${e.img_url}')`,
-                }}
+                  }}
               ></div>
               <div className=" bg-gray-100 p-2 pl-6 rounded-b-xl">
                 <h1 className="text-xl text-gray-600 font-bold mt-2">{e.title.toUpperCase()}</h1>
                 <p className="text-gray-600 my-2 text-justify">
                   {e.short_desc.slice(0,280) + '...'}
                 </p>
-                <a
-                  href=""
-                  className="text-gray-600 flex items-end justify-end mr-2"
-                >
+                  <Link 
+                    className="text-gray-600 flex items-end justify-end mr-2"
+                  href={`/articles/${e.id}`}>
                   Selengkapnya..
-                </a>
+            </Link>
               </div>
             </div>
               )
