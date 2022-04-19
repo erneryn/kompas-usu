@@ -4,6 +4,7 @@ import { Drawer, Button } from "antd";
 import { useState } from "react";
 import Link from 'next/link';
 import { Link  as Scroll  } from "react-scroll";
+import Image from 'next/image'
 
 
 export default function Navbar({type}) {
@@ -18,11 +19,13 @@ export default function Navbar({type}) {
     <>
       <div className="hidden  bg-gray-100 w-full sm:flex px-28 py-1 bg-bottom absolute border-b-4 border-b-gray-700 z-10">
         <div className="w-3/12 ">
-          <img src="/logo.png" height={80} width={90} alt="logo kompas usu" />
+        <Link href='/' passHref>
+          <Image src="/logo.png" height={80} width={80} alt="logo kompas usu" />
+          </Link>
         </div>
         <div className="w-9/12 flex items-center justify-end">
           <ul className="flex items-center">
-            <Link href='/'>
+            <Link href='/' passHref>
             <li className="text-lg mr-10 hover:text-yellow-400 cursor-pointer">
               Home
             </li>
@@ -30,7 +33,7 @@ export default function Navbar({type}) {
             {
             type !== 'pages' && 
             <>
-             <Scroll
+            <Scroll
                 to="about"
                 spy={true}
                 smooth={true}
@@ -73,7 +76,9 @@ export default function Navbar({type}) {
       </div>
       <div className="sm:hidden flex justify-between items-center absolute z-10 w-screen">
         <div className="p-4">
-          <img src="/logo.png" height={80} width={90} alt="logo kompas usu" />
+        <Link href='/' passHref>
+          <Image src="/logo.png" height={80} width={80} alt="logo kompas usu" />
+          </Link>
         </div>
         <div className="p-10" onClick={showDrawer}>
           <MenuOutlined className="text-3xl text-white" />
