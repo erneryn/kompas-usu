@@ -25,3 +25,18 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.post p{
+  margin-bottom: 20px;
+  margin-top: 10px;
+  text-align: justify;
+}
+
+figcaption {
+  color: gray;
+  text-align: center;
+}
+
+h2 {
+  font-size: 25px;
+}

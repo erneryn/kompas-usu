@@ -4,12 +4,11 @@ import Wording from '../../wording.json'
 import parse from 'html-react-parser';
 import Layout from '../../components/layout/mainlayout';
 import Image from 'next/image';
+import DivisionComp from '@/components/division';
 
 const Content = (query)=>{
-    console.log(query)
     return (
         <div className='text-xl'>
-        {/* <img src={Wording[query].image} width="600" className="py-5"></img> */}
         <Image src={Wording[query].image} width={600} height={400} alt=""/>
         <div>
         {
@@ -35,6 +34,7 @@ export default function Division(){
                     </div>
                 </div>         
             </div>
+            <DivisionComp/>
             </Layout>
         </div>
     )

@@ -1,15 +1,15 @@
 import Head from "next/head";
 import Jumbotron from "../components/jumbotron";
 import Navbar from "../components/navbar";
-import About from "../components/about";
+import About from "../components/section/about";
 import Ikrar from "../components/ikrar";
-import RekamJejak from "../components/rekamJejak";
+import RekamJejak from "../components/section/rekamJejak";
 import Division from "../components/division";
 import KontakKami from "../components/contact";
 import { Element } from "react-scroll";
 import Layout from "../components/layout/mainlayout";
 
-export default function Home() {
+export default function Home({data}) {
   return (
     <div className="w-screen">
       <Head>
@@ -53,8 +53,8 @@ export default function Home() {
           <Element name="ikrar">
           <Ikrar />
           </Element>
-          <Element name="rekamjejak">
-          <RekamJejak />
+          <Element name="artikel">
+          <RekamJejak data={data.featuredJejak} />
           </Element>
           <Element name="division">
           <Division />
@@ -63,4 +63,40 @@ export default function Home() {
       </div>
     </div>
   );
+}
+
+
+export async function getStaticProps() {
+  const res = await fetch('https://kuapi.rucciartcycles.com/wp-json/wp/v2/posts?tags=9')
+  const data = await res.json()
+
+  const result = []
+  
+  await getImagesDetail();
+
+  return {
+      props: {
+          data: {
+            featuredJejak: result
+          },
+      }
+  }
+
+  async function getImagesDetail() {
+    for (let el = 0; el < data.length; el++) {
+      const formatResult = {
+        title: '',
+        content: '',
+        images: '',
+        slug:''
+      };
+      const media = await fetch(data[el]['_links']['wp:featuredmedia'][0].href);
+      const mediaData = await media.json();
+      formatResult.title = data[el].title.rendered;
+      formatResult.content = data[el].excerpt.rendered;
+      formatResult.images = mediaData.link;
+      formatResult.slug = data[el].slug
+      result.push(formatResult);
+    }
+  }
 }

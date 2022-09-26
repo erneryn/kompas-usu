@@ -19,9 +19,10 @@ module.exports = {
       },
       spacing: {
         'custom-1': '400px',
-        'half-screen': '50vh'
+        'half-screen': '50vh',
+        '75-vh': '75vh'
       }
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/line-clamp')],
 }

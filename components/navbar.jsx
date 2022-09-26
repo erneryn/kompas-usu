@@ -15,6 +15,50 @@ export default function Navbar({type}) {
   const onClose = () => {
     setVisible(false);
   };
+
+  const HomeNavbar = ({type}) => {
+    if (type === 'pages') {
+      return (<></>)
+    }
+    return (
+      <>
+      <Scroll
+          to="about"
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={500}
+        >
+      <li className="text-lg mr-10 hover:text-yellow-400 cursor-pointer">
+          Tentang Kami
+      </li>
+      </Scroll>
+      <Scroll
+          to="artikel"
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={500}
+        >
+      <li className="text-lg mr-10 hover:text-yellow-400 cursor-pointer">
+        Rekam Jejak
+      </li>
+      </Scroll>
+      <Scroll
+          to="division"
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={500}
+        >
+      <li className="text-lg mr-10 hover:text-yellow-400 cursor-pointer">
+        Divisi
+      </li>
+      </Scroll>
+      </>
+    )
+  }
+
   return (
     <>
       <div className="hidden  bg-gray-100 w-full sm:flex px-28 py-1 bg-bottom absolute border-b-4 border-b-gray-700 z-10">
@@ -30,44 +74,7 @@ export default function Navbar({type}) {
               Home
             </li>
             </Link>
-            {
-            type !== 'pages' && 
-            <>
-            <Scroll
-                to="about"
-                spy={true}
-                smooth={true}
-                offset={0}
-                duration={500}
-              >
-            <li className="text-lg mr-10 hover:text-yellow-400 cursor-pointer">
-              Tentang Kami
-            </li>
-            </Scroll>
-            <Scroll
-                to="rekamjejak"
-                spy={true}
-                smooth={true}
-                offset={0}
-                duration={500}
-              >
-            <li className="text-lg mr-10 hover:text-yellow-400 cursor-pointer">
-              Rekam Jejak
-            </li>
-            </Scroll>
-            <Scroll
-                to="division"
-                spy={true}
-                smooth={true}
-                offset={0}
-                duration={500}
-              >
-            <li className="text-lg mr-10 hover:text-yellow-400 cursor-pointer">
-              Divisi
-            </li>
-            </Scroll>
-            </>
-            }
+            <HomeNavbar type={type}/>
             <li className="text-lg mr-10 hover:text-yellow-400 cursor-pointer">
               Kontak Kami
             </li>

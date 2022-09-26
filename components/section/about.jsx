@@ -1,5 +1,6 @@
 import { CompassOutlined, ArrowRightOutlined } from "@ant-design/icons";
-import wording from '../wording.json'
+import Link from "next/link";
+import wording from '../../wording.json'
 export default function About() {
   return (
     <div className="w-screen flex items-center justify-center my-6 rounded-t-2xl">
@@ -15,10 +16,12 @@ export default function About() {
                   {wording.about_us_short_desc}
               </p>
               <div className="flex items-center justify-end mt-10 mr-10">
+              <Link href='/about-us'>
                 <div className="flex items-center p-3 hover:bg-white">
               <h1 className="text-gray-600 mr-4">Selengkapnya</h1>
               <ArrowRightOutlined className="text-3xl" />
                 </div>
+              </Link>
             </div>
               </div>
             </div>
@@ -38,10 +41,12 @@ export default function About() {
               </p>
             </div>
             <div className="w-full relative left">
+              <Link href='/about-us'>
               <div className="flex items-center justify-end mt-5 bg-text-zinc-50 py-2 px-0 cursor-pointer bg-yellow-300 -ml-20">
                 <h1 className="text-black mr-4">Selengkapnya</h1>
                 <ArrowRightOutlined className="text-3xl" />
               </div>
+              </Link>
             </div>
           </div>
         </div>

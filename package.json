@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
+    "@tailwindcss/line-clamp": "^0.3.1",
     "antd": "^4.17.4",
     "framer-motion": "^5.5.5",
     "html-react-parser": "^1.4.5",
@@ -16,6 +17,8 @@
     "next-optimized-images": "^2.6.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-icons": "^4.3.1",
+    "react-multi-carousel": "^2.8.0",
     "react-scroll": "^1.8.4",
     "react-slick": "^0.28.1",
     "slick-carousel": "^1.8.1"
