@@ -33,7 +33,7 @@ export default function Prestasi ({data}) {
       {
         sliceData.map((prestasi,idx) => {
           return (
-            <Link href={'/prestasi/'+ prestasi.slug}>
+            <Link href={'/prestasi/'+ prestasi.slug} key={idx}>
             <div className='relative'>
             <div className="rounded-xl w-full relative h-80" key={idx}>
               <Image src={prestasi.images} layout="fill" objectFit='cover' className='rounded-xl scale-100 hover:scale-105 ease-in duration-100'/>
