@@ -16,7 +16,7 @@ export default function About() {
                   {wording.about_us_short_desc}
               </p>
               <div className="flex items-center justify-end mt-10 mr-10">
-              <Link href='/about-us'>
+              <Link href='/tentang-kami'>
                 <div className="flex items-center p-3 hover:bg-white">
               <h1 className="text-gray-600 mr-4">Selengkapnya</h1>
               <ArrowRightOutlined className="text-3xl" />
