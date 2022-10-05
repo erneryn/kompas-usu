@@ -5,6 +5,7 @@ import {
   GoogleOutlined,
   TwitterOutlined,
 } from "@ant-design/icons";
+import Link from "next/link";
 
 export default function Ikrar() {
   return (
@@ -24,7 +25,7 @@ export default function Ikrar() {
           <h1 className="text-lg text-g text-gray-500 mb-5 font-bold">
             Sekretariat
           </h1>
-          <PushpinOutlined className="text-2xl mb-2 text-gray-500" />
+          {/* <PushpinOutlined className="text-2xl mb-2 text-gray-500" /> */}
           <p className="text-gray-500">
             Jalan Alumni No.2 Kampus Universitas Sumatera Utara
           </p>
@@ -52,10 +53,33 @@ export default function Ikrar() {
             </div>
           </div>
         </div>
+        <div className="sm:w-6/12 pl-9 pr-2 sm:mt-0 mt-10">
+          <h1 className="text-lg text-g text-gray-500 mb-5 font-bold">
+            Menu
+          </h1>
+          {/* <PushpinOutlined className="text-2xl mb-2 text-gray-500" /> */}
+          <ul>
+          <li className="text-lg my-2">
+              <Link href={'/'}>Home</Link>
+            </li>
+            <li className="text-lg my-2">
+              <Link href={'/tentang-kami'}>Tentang Kami</Link>
+            </li>
+            <li className="text-lg my-2">
+              <Link href={'/rekam-jejak'}>Rekam Jejak</Link>
+            </li>
+            <li className="text-lg my-2">
+              <Link href={'/prestasi'}>Prestasi</Link>
+            </li>
+            <li className="text-lg my-2">
+              <Link href={'/news-and-article'}>News and Article</Link>
+            </li>
+          </ul>
+        </div>
       </div>
 
 			<div className="flex items-center justify-between mt-10 mb-10">
-			<img src="/logo_usu.png" height={100} width={130} alt="logo kompas usu" />
+			<img src="/logo_usu.png" height={100} width={105} alt="logo kompas usu" />
 			<div className="mx-5"></div>
 			<img src="/logo.png" height={100} width={100} alt="logo kompas usu" />
 			</div>

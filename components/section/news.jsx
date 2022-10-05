@@ -10,16 +10,14 @@ import { GiSteeltoeBoots } from 'react-icons/gi'
 
 
 export const CarouselList = ({data}) => (
-  <NextCarousel items={3}>
-    {data.map((e, key) => <Link href={`/rekam-jejak/${e.slug}`} passHref key={e}>
-      <div className="bg-gray-100 mx-2 rounded-t-3xl mb-5 cursor-pointer">
-        <div className="relative h-72 rounded-t-3xl bg-slate-500">
-          <Image src={e.images} layout="fill" objectFit="cover" alt={e.title} className="rounded-t-3xl" />
+  <NextCarousel items={1}>
+    {data.map((e, key) => <Link href={`/news-and-article/${e.slug}`} passHref key={e}>
+      <div className="sm:mx-40 rounded-t-3xl mb-5 cursor-pointer flex  pb-10 h-72">
+        <div className="relative h-72 w-1/2 bg-slate-500">
+          <Image src={e.images} layout="fill" objectFit="cover" alt={e.title} />
         </div>
-        <div>
-        </div>
-        <div className="p-2 px-4 h-48">
-          <h1 className="font-bold text-black text-xl mb-1">{e.title}</h1>
+        <div className="p-5 h-72 px-4 w-1/2 border">
+          <h1 className="font-bold text-black sm:text-xl mb-1">{e.title}</h1>
           {HTMLReactParser(e.content, {
             replace: domNode => {
               if (domNode.name === 'p') {
@@ -37,9 +35,9 @@ export default function SimpleSlider ({data}) {
     return (
       <div className="flex items-center justify-center py-8">
         <div className="w-11/12">
-          <div className="flex items-center justify-center mb-4 text-gray-600">
-            <GiSteeltoeBoots size={50} />
-            <h1 className="text-4xl  text-gray-600 ml-3">REKAM JEJAK</h1>
+          <div className="flex items-center justify-center mb-8 text-gray-600">
+            {/* <GiSteeltoeBoots size={50} /> */}
+            <h1 className="text-4xl  text-gray-600 ml-3">NEWS AND ARTICLE</h1>
           </div>
           <CarouselList data={data}/>
         </div>

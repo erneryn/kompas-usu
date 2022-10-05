@@ -8,7 +8,7 @@ export default function Division() {
   return (
     <div className="bg-no-repeat bg-cover bg-bottom relative mt-10">
       <div className="bg-green-600 w-5/12 sm:w-4/12 p-4">
-        <h1 className="text-3xl text-white italic tracking-widest">DIVISI</h1>
+        <h1 className="text-3xl text-white italic tracking-widest">Minat</h1>
       </div>
       <div className="flex justify-center items-center w-full relative">
         <Link href={"/hutan-gunung"} passHref>

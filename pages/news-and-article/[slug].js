@@ -29,7 +29,7 @@ export default function DetailRekamJejak({ post }){
 }
 
 export const getStaticPaths = async () => {
-    const res = await fetch('https://kuapi.rucciartcycles.com/wp-json/wp/v2/posts?categories=6')
+    const res = await fetch('https://kuapi.rucciartcycles.com/wp-json/wp/v2/posts?categories=7')
     const data = await res.json()
 
     const paths = data.map(post => {
